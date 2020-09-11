@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+	<record model="ir.ui.view" id="apg_view_account_payment_group_search">
+		<field name="name">apg.view.account.payment.group.search</field>
+		<field name="model">account.payment.group</field>
+		<field name="inherit_id" ref="account_payment_group.view_account_payment_group_search"></field>
+		<field name="arch" type="xml">
+			<field name="partner_id" position="after">
+				<field name="paid_invoices" />
+			</field>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="apg_view_account_payment_group_tree">
+		<field name="name">apg.view.account.payment.group.tree</field>
+		<field name="model">account.payment.group</field>
+		<field name="inherit_id" ref="account_payment_group.view_account_payment_group_tree"></field>
+		<field name="arch" type="xml">
+			<field name="partner_type" position="after">
+				<field name="paid_invoices" optional="hide" />
+			</field>
+		</field>
+	</record>
+
+</odoo>
